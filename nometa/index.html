@@ -191,10 +191,10 @@
     .cta { padding: 56px 20px; }
     #cursor-glow { display: none; }
   }
+  /* "reduce motion" in OS settings: keep fades and effects, drop big movement */
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-    .reveal, .msg, .gap { opacity: 1; transform: none; }
-    .strike::after { transform: scaleX(1) rotate(-3deg); }
+    .blob { animation: none; }
+    .reveal, .msg { transform: none; }
   }
 </style>
 </head>

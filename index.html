@@ -261,9 +261,11 @@
     .cta { padding: 56px 20px; }
     #cursor-glow { display: none; }
   }
+  /* "reduce motion" in OS settings: keep fades and effects, drop big movement */
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-    .reveal { opacity: 1; transform: none; }
+    .blob { animation: none; }
+    .marquee-track { animation-duration: 60s; }
+    .reveal { transform: none; }
   }
 </style>
 </head>
